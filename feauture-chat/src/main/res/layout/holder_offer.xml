@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="2dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/offer_background">
+
+    <ImageView
+        android:id="@+id/offerImg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/offer_img"
+        android:layout_marginVertical="4dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/offerHeader"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/offerHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/offerImg"
+        app:layout_constraintBottom_toTopOf="@id/offerValue"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginVertical="4dp"
+        android:textSize="16sp"
+        android:textColor="@color/text_secondary"
+        android:text="Daniel gets your offer for" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/offerValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/offerHeader"
+        app:layout_constraintBottom_toTopOf="@id/divider"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginVertical="4dp"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/text_secondary"
+        android:text="€1 498,00" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/offerValue"
+        android:layout_marginVertical="4dp"
+        app:layout_constraintBottom_toBottomOf="@id/offerDiscussDescription"
+        android:background="#80737373" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/offerDiscussDescription"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/divider"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textSize="14sp"
+        android:textColor="@color/text_secondary"
+        android:layout_marginVertical="4dp"
+        android:layout_marginHorizontal="16dp"
+        android:text="To complete the deal, Daniel must accept your offer, until that you can discuss the details here" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
